@@ -1,0 +1,20 @@
+<div class="w-full h-full flex flex-row items-center justify-between">
+  <img src="assets/logo.png" class="w-28 h-8" />
+  <div>
+    <span
+      nz-dropdown
+      nzTrigger="click"
+      [nzDropdownMenu]="menu"
+      nz-icon
+      nzType="global"
+      nzTheme="outline"
+      class="text-2xl cursor-pointer text-white"
+    ></span>
+    <nz-dropdown-menu #menu="nzDropdownMenu">
+      <ul nz-menu>
+        <li nz-menu-item (click)="onLanguageChange('en')">English</li>
+        <li nz-menu-item (click)="onLanguageChange('ru')">Русский</li>
+      </ul>
+    </nz-dropdown-menu>
+  </div>
+</div>

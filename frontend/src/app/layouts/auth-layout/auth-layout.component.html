@@ -1,0 +1,27 @@
+<div
+  nz-flex
+  nzJustify="center"
+  [nzVertical]="true"
+  class="h-screen bg-[#f0f2f5]"
+>
+  <div class="h-1/6 ml-auto p-6">
+    <span
+      nz-dropdown
+      nzTrigger="click"
+      [nzDropdownMenu]="menu"
+      nz-icon
+      nzType="global"
+      nzTheme="outline"
+      class="text-2xl cursor-pointer"
+    ></span>
+    <nz-dropdown-menu #menu="nzDropdownMenu">
+      <ul nz-menu>
+        <li nz-menu-item (click)="onLanguageChange('en')">English</li>
+        <li nz-menu-item (click)="onLanguageChange('ru')">Русский</li>
+      </ul>
+    </nz-dropdown-menu>
+  </div>
+  <div class="bg-[url('/assets/bg.png')] h-5/6">
+    <router-outlet />
+  </div>
+</div>

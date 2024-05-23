@@ -1,0 +1,88 @@
+<nz-modal
+  [(nzVisible)]="isVisible"
+  [nzTitle]="'projects.addProject' | translate"
+  (nzOnCancel)="onCancel()"
+>
+  <div *nzModalContent>
+    <form nz-form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
+      <nz-form-item>
+        <nz-form-control [nzErrorTip]="'projectForm.nameError' | translate">
+          <nz-input-group nzPrefixIcon="project">
+            <input
+              type="text"
+              nz-input
+              formControlName="name"
+              [placeholder]="'projectForm.name' | translate"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control
+          [nzErrorTip]="'projectForm.descriptionError' | translate"
+        >
+          <nz-input-group nzPrefixIcon="file-text">
+            <input
+              type="text"
+              nz-input
+              formControlName="description"
+              [placeholder]="'projectForm.description' | translate"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control
+          [nzErrorTip]="'projectForm.responsibilitiesError' | translate"
+        >
+          <nz-input-group nzPrefixIcon="check-square">
+            <input
+              type="text"
+              nz-input
+              formControlName="responsibilities"
+              [placeholder]="'projectForm.responsibilities' | translate"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control [nzErrorTip]="'projectForm.teamSizeError' | translate">
+          <nz-input-group nzPrefixIcon="team">
+            <input
+              type="number"
+              nz-input
+              formControlName="teamSize"
+              [placeholder]="'projectForm.teamSize' | translate"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control
+          [nzErrorTip]="'projectForm.dateRangeError' | translate"
+        >
+          <nz-range-picker
+            formControlName="dateRange"
+            [nzPlaceHolder]="[
+              'projectForm.startDate' | translate,
+              'projectForm.endDate' | translate
+            ]"
+          ></nz-range-picker>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </div>
+  <div *nzModalFooter>
+    <button nz-button nzType="default" (click)="onCancel()">
+      {{ "controls.cancel" | translate }}
+    </button>
+    <button
+      nz-button
+      nzType="primary"
+      [nzLoading]="isConfirmLoading"
+      (click)="onSubmit()"
+    >
+      {{ "controls.submit" | translate }}
+    </button>
+  </div>
+</nz-modal>

@@ -1,0 +1,9 @@
+<div class="flex justify-end mb-4">
+  <button nz-button nzType="primary" (click)="showModal()">
+    {{ "projects.addProject" | translate }}
+  </button>
+</div>
+
+<app-add-project-form [(isVisible)]="isVisible"></app-add-project-form>
+
+<app-project-table [projects]="projects$ | async"></app-project-table>

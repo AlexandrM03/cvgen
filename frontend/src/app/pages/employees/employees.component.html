@@ -1,0 +1,12 @@
+<div class="flex justify-end mb-4">
+  <button nz-button nzType="primary" (click)="showModal()">
+    {{ "employees.addEmployee" | translate }}
+  </button>
+</div>
+
+<app-add-employee-form
+  (employeeSubmitted)="({})"
+  [(isVisible)]="isVisible"
+></app-add-employee-form>
+
+<app-employee-table [employees]="employees$ | async"></app-employee-table>

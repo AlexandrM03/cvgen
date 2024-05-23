@@ -1,0 +1,14 @@
+<ul nz-menu nzMode="inline" class="h-full">
+  <li nz-menu-item [nzSelected]="isActive('employees')">
+    <i nz-icon nzType="team"></i>
+    <span>
+      <a href="dashboard/employees">{{ "sidebar.employees" | translate }}</a>
+    </span>
+  </li>
+  <li nz-menu-item [nzSelected]="isActive('projects')">
+    <i nz-icon nzType="project"></i>
+    <span>
+      <a href="dashboard/projects">{{ "sidebar.projects" | translate }}</a>
+    </span>
+  </li>
+</ul>

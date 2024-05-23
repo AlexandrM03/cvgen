@@ -1,0 +1,66 @@
+{
+  "auth": {
+    "username": "Имя пользователя",
+    "password": "Пароль",
+    "usernameError": "Пожалуйста, введите своё имя пользователя!",
+    "passwordError": "Пожалуйста, введите свой пароль!",
+    "remember": "Запомнить меня",
+    "forgot": "Забыли пароль",
+    "login": "Войти"
+  },
+  "employeeForm": {
+    "firstName": "Имя",
+    "lastName": "Фамилия",
+    "email": "Email",
+    "specialization": "Специализация",
+    "department": "Отдел",
+    "submit": "Отправить",
+    "firstNameError": "Имя обязательно для заполнения",
+    "lastNameError": "Фамилия обязательна для заполнения",
+    "emailError": "Неверный формат email",
+    "specializationError": "Специализация обязательна для заполнения",
+    "departmentError": "Отдел обязателен для заполнения"
+  },
+  "projectForm": {
+    "name": "Название",
+    "nameError": "Название обязательно",
+    "description": "Описание",
+    "descriptionError": "Описание обязательно",
+    "responsibilities": "Обязанности",
+    "responsibilitiesError": "Обязанности обязательны",
+    "teamSize": "Размер команды",
+    "teamSizeError": "Размер команды обязателен и должен быть не менее 1",
+    "dateRange": "Диапазон дат",
+    "dateRangeError": "Диапазон дат обязателен",
+    "startDate": "Дата начала",
+    "endDate": "Дата окончания"
+  },
+  "employees": {
+    "addEmployee": "Добавить сотрудника"
+  },
+  "projects": {
+    "addProject": "Добавить проект"
+  },
+  "controls": {
+    "cancel": "Отмена",
+    "submit": "Отправить"
+  },
+  "sidebar": {
+    "employees": "Сотрудники",
+    "projects": "Проекты"
+  },
+  "employeeTable": {
+    "firstName": "Имя",
+    "lastName": "Фамилия",
+    "email": "Email",
+    "department": "Отдел",
+    "specialization": "Специализация"
+  },
+  "projectsTable": {
+    "name": "Название",
+    "period": "Период",
+    "teamSize": "Участников",
+    "description": "Описание",
+    "responsibilities": "Обязанности"
+  }
+}

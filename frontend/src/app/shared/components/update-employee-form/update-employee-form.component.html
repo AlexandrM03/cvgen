@@ -1,0 +1,95 @@
+<form nz-form [formGroup]="employeeForm" (ngSubmit)="onSubmit()" class="w-4/5">
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+    <div class="flex flex-col">
+      <nz-form-item>
+        <nz-form-label nzFor="firstName" [nzRequired]="true"
+          >First Name</nz-form-label
+        >
+        <nz-form-control
+          [nzErrorTip]="'employeeForm.firstNameError' | translate"
+        >
+          <input
+            type="text"
+            nz-input
+            formControlName="firstName"
+            id="firstName"
+            placeholder="First Name"
+          />
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div class="flex flex-col">
+      <nz-form-item>
+        <nz-form-label nzFor="lastName" [nzRequired]="true"
+          >Last Name</nz-form-label
+        >
+        <nz-form-control
+          [nzErrorTip]="'employeeForm.lastNameError' | translate"
+        >
+          <input
+            type="text"
+            nz-input
+            formControlName="lastName"
+            id="lastName"
+            placeholder="Last Name"
+          />
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div class="flex flex-col">
+      <nz-form-item>
+        <nz-form-label nzFor="email" [nzRequired]="true">Email</nz-form-label>
+        <nz-form-control [nzErrorTip]="'employeeForm.emailError' | translate">
+          <input
+            type="email"
+            nz-input
+            formControlName="email"
+            id="email"
+            placeholder="Email"
+          />
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
+    <div class="flex flex-col">
+      <nz-form-item>
+        <nz-form-label nzFor="specialization" [nzRequired]="true"
+          >Specialization</nz-form-label
+        >
+        <nz-form-control
+          [nzErrorTip]="'employeeForm.specializationError' | translate"
+        >
+          <input
+            type="text"
+            nz-input
+            formControlName="specialization"
+            id="specialization"
+            placeholder="Specialization"
+          />
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div class="flex flex-col">
+      <nz-form-item>
+        <nz-form-label nzFor="department" [nzRequired]="true"
+          >Department</nz-form-label
+        >
+        <nz-form-control
+          [nzErrorTip]="'employeeForm.departmentError' | translate"
+        >
+          <input
+            type="text"
+            nz-input
+            formControlName="department"
+            id="department"
+            placeholder="Department"
+          />
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+</form>
+<div>
+  <button nz-button nzType="primary" (click)="onSubmit()">Submit</button>
+</div>

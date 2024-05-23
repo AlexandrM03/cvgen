@@ -1,0 +1,48 @@
+<form nz-form [formGroup]="validateForm" class="w-80" (ngSubmit)="submitForm()">
+  <nz-form-item>
+    <nz-form-control [nzErrorTip]="'auth.usernameError' | translate">
+      <nz-input-group nzPrefixIcon="user">
+        <input
+          type="text"
+          nz-input
+          formControlName="username"
+          [placeholder]="'auth.username' | translate"
+        />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control [nzErrorTip]="'auth.passwordError' | translate">
+      <nz-input-group nzPrefixIcon="lock">
+        <input
+          type="password"
+          nz-input
+          formControlName="password"
+          [placeholder]="'auth.password' | translate"
+        />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <div nz-row class="mb-4">
+    <div nz-col [nzSpan]="12">
+      <label nz-checkbox formControlName="remember">
+        <span>
+          {{ "auth.remember" | translate }}
+        </span>
+      </label>
+    </div>
+    <div nz-col [nzSpan]="12">
+      <a class="float-right">
+        {{ "auth.forgot" | translate }}
+      </a>
+    </div>
+  </div>
+  <button
+    nz-button
+    class="w-full mb-4"
+    [nzType]="'primary'"
+    [nzLoading]="isLoading"
+  >
+    {{ "auth.login" | translate }}
+  </button>
+</form>

@@ -1,0 +1,24 @@
+<nz-table #basicTable [nzData]="employees">
+  <thead>
+    <tr>
+      <th>{{ "employeeTable.firstName" | translate }}</th>
+      <th>{{ "employeeTable.lastName" | translate }}</th>
+      <th>{{ "employeeTable.email" | translate }}</th>
+      <th>{{ "employeeTable.department" | translate }}</th>
+      <th>{{ "employeeTable.specialization" | translate }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let data of basicTable.data"
+      class="cursor-pointer"
+      (click)="handleClickedRow(data.id)"
+    >
+      <td>{{ data.firstName }}</td>
+      <td>{{ data.lastName }}</td>
+      <td>{{ data.email }}</td>
+      <td>{{ data.department }}</td>
+      <td>{{ data.specialization }}</td>
+    </tr>
+  </tbody>
+</nz-table>

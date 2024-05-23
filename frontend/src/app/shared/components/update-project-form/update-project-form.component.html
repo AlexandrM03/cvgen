@@ -1,0 +1,114 @@
+<form
+  nz-form
+  [formGroup]="projectForm"
+  (ngSubmit)="onSubmit($event)"
+  class="w-4/5"
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+    <div class="flex flex-col">
+      <nz-form-item>
+        <nz-form-label nzFor="name" [nzRequired]="true">{{
+          "projectForm.name" | translate
+        }}</nz-form-label>
+        <nz-form-control [nzErrorTip]="'projectForm.nameError' | translate">
+          <input
+            type="text"
+            nz-input
+            formControlName="name"
+            id="name"
+            [placeholder]="'projectForm.name' | translate"
+          />
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div class="flex flex-col">
+      <nz-form-item>
+        <nz-form-label nzFor="teamSize" [nzRequired]="true">{{
+          "projectForm.teamSize" | translate
+        }}</nz-form-label>
+        <nz-form-control [nzErrorTip]="'projectForm.teamSizeError' | translate">
+          <input
+            type="number"
+            nz-input
+            formControlName="teamSize"
+            id="teamSize"
+            [placeholder]="'projectForm.teamSize' | translate"
+          />
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div class="flex flex-col">
+      <nz-form-item>
+        <nz-form-label nzFor="startDate" [nzRequired]="true">{{
+          "projectForm.startDate" | translate
+        }}</nz-form-label>
+        <nz-form-control
+          [nzErrorTip]="'projectForm.startDateError' | translate"
+        >
+          <nz-date-picker
+            formControlName="startDate"
+            id="startDate"
+            [nzPlaceHolder]="'projectForm.startDate' | translate"
+          ></nz-date-picker>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <div class="mt-4">
+    <div class="flex flex-col">
+      <nz-form-item>
+        <nz-form-label nzFor="endDate" [nzRequired]="true">{{
+          "projectForm.endDate" | translate
+        }}</nz-form-label>
+        <nz-form-control [nzErrorTip]="'projectForm.endDateError' | translate">
+          <nz-date-picker
+            formControlName="endDate"
+            id="endDate"
+            [nzPlaceHolder]="'projectForm.endDate' | translate"
+          ></nz-date-picker>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
+    <div class="flex flex-col">
+      <nz-form-item>
+        <nz-form-label nzFor="responsibilities" [nzRequired]="true">{{
+          "projectForm.responsibilities" | translate
+        }}</nz-form-label>
+        <nz-form-control
+          [nzErrorTip]="'projectForm.responsibilitiesError' | translate"
+        >
+          <textarea
+            nz-input
+            formControlName="responsibilities"
+            id="responsibilities"
+            [placeholder]="'projectForm.responsibilities' | translate"
+          ></textarea>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div class="flex flex-col">
+      <nz-form-item>
+        <nz-form-label nzFor="description" [nzRequired]="true">{{
+          "projectForm.description" | translate
+        }}</nz-form-label>
+        <nz-form-control
+          [nzErrorTip]="'projectForm.descriptionError' | translate"
+        >
+          <textarea
+            nz-input
+            formControlName="description"
+            id="description"
+            [placeholder]="'projectForm.description' | translate"
+          ></textarea>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+</form>
+<div>
+  <button nz-button nzType="primary" (click)="onSubmit($event)">
+    {{ "controls.submit" | translate }}
+  </button>
+</div>

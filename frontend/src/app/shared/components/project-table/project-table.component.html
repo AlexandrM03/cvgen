@@ -1,0 +1,27 @@
+<nz-table #basicTable [nzData]="projects">
+  <thead>
+    <tr>
+      <th>{{ "projectsTable.name" | translate }}</th>
+      <th nzWidth="200px">{{ "projectsTable.period" | translate }}</th>
+      <th nzWidth="100px">{{ "projectsTable.teamSize" | translate }}</th>
+      <th>{{ "projectsTable.description" | translate }}</th>
+      <th>{{ "projectsTable.responsibilities" | translate }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let data of basicTable.data"
+      class="cursor-pointer"
+      (click)="handleClickedRow(data.id)"
+    >
+      <td>{{ data.name }}</td>
+      <td>
+        {{ data.startDate | date : "dd/MM/yyyy" }} -
+        {{ data.endDate ? (data.endDate | date : "dd/MM/yyyy") : "Now" }}
+      </td>
+      <td>{{ data.teamSize }}</td>
+      <td>{{ data.description }}</td>
+      <td>{{ data.responsibilities }}</td>
+    </tr>
+  </tbody>
+</nz-table>

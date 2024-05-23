@@ -1,0 +1,20 @@
+<ng-container *ngIf="employee$ | async as employee; else notFound">
+  <nz-tabset>
+    <nz-tab nzTitle="Info">
+      <app-update-employee-form
+        [employee]="employee"
+      ></app-update-employee-form>
+    </nz-tab>
+    <nz-tab nzTitle="CV">
+      <app-cv-list
+        [cvs]="cvs$ | async"
+        (delete)="onDelete($event)"
+        (create)="onCreate()"
+      ></app-cv-list>
+    </nz-tab>
+  </nz-tabset>
+</ng-container>
+
+<ng-template #notFound>
+  <h1>Employee not found</h1>
+</ng-template>

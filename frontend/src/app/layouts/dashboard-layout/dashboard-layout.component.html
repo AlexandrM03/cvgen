@@ -1,0 +1,16 @@
+<nz-layout class="min-h-screen">
+  <nz-header nzTheme="light">
+    <app-header />
+  </nz-header>
+  <nz-layout>
+    <nz-sider nzWidth="200px" nzTheme="light">
+      <app-sidebar />
+    </nz-sider>
+    <nz-layout class="p-0 md:p-4">
+      <app-breadcrumbs />
+      <nz-content class="bg-white p-4 overflow-auto">
+        <router-outlet></router-outlet>
+      </nz-content>
+    </nz-layout>
+  </nz-layout>
+</nz-layout>

@@ -1,0 +1,66 @@
+{
+  "auth": {
+    "username": "Username",
+    "password": "Password",
+    "usernameError": "Please input your username!",
+    "passwordError": "Please input your password!",
+    "remember": "Remember me",
+    "forgot": "Forgot password",
+    "login": "Login in"
+  },
+  "employeeForm": {
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "specialization": "Specialization",
+    "department": "Department",
+    "submit": "Submit",
+    "firstNameError": "First Name is required",
+    "lastNameError": "Last Name is required",
+    "emailError": "Invalid email format",
+    "specializationError": "Specialization is required",
+    "departmentError": "Department is required"
+  },
+  "projectForm": {
+    "name": "Name",
+    "nameError": "Name is required",
+    "description": "Description",
+    "descriptionError": "Description is required",
+    "responsibilities": "Responsibilities",
+    "responsibilitiesError": "Responsibilities are required",
+    "teamSize": "Team Size",
+    "teamSizeError": "Team size is required and must be at least 1",
+    "dateRange": "Date Range",
+    "dateRangeError": "Date range is required",
+    "startDate": "Start Date",
+    "endDate": "End Date"
+  },
+  "employees": {
+    "addEmployee": "Add Employee"
+  },
+  "projects": {
+    "addProject": "Add Project"
+  },
+  "controls": {
+    "cancel": "Cancel",
+    "submit": "Submit"
+  },
+  "sidebar": {
+    "employees": "Employees",
+    "projects": "Projects"
+  },
+  "employeeTable": {
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "department": "Department",
+    "specialization": "Specialization"
+  },
+  "projectsTable": {
+    "name": "Name",
+    "period": "Period",
+    "teamSize": "Team Size",
+    "description": "Description",
+    "responsibilities": "Responsibilities"
+  }
+}
