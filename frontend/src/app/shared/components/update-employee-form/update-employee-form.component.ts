@@ -5,7 +5,7 @@ import { Store } from '@ngrx/store';
 import { IAppState } from '../../../store/states/app.state';
 import { ToastrService } from 'ngx-toastr';
 import { updateEmployee } from '../../../store/actions/employee.action';
-import { CommonModule } from '@angular/common';
+
 import { TranslateModule } from '@ngx-translate/core';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
@@ -15,7 +15,7 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 @Component({
     selector: 'app-update-employee-form',
     standalone: true,
-    imports: [CommonModule, TranslateModule, ReactiveFormsModule, FormsModule, NzFormModule, NzInputModule, NzDatePickerModule, NzButtonModule],
+    imports: [TranslateModule, ReactiveFormsModule, FormsModule, NzFormModule, NzInputModule, NzDatePickerModule, NzButtonModule],
     templateUrl: './update-employee-form.component.html',
 })
 export class UpdateEmployeeFormComponent implements OnInit {

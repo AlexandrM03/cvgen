@@ -1,23 +1,32 @@
-<nz-tabset
-  *ngIf="cvs.length > 0; else noCvsTemplate"
-  nzTabPosition="left"
-  [nzTabBarExtraContent]="extraTemplate"
-  class="h-[70vh]"
->
-  <nz-tab *ngFor="let cv of cvs" [nzTitle]="titleTemplate">
-    <ng-template #titleTemplate>
-      <div class="flex flex-row w-52 justify-between items-center">
-        <span>{{ cv.name }}</span>
-        <button nz-button nzType="text" (click)="deleteCv($event, cv.id)">
-          <span nz-icon nzType="delete" nzTheme="outline"></span>
-        </button>
-      </div>
-    </ng-template>
-    <div>
-      <app-update-cv-form [cv]="cv"></app-update-cv-form>
-    </div>
-  </nz-tab>
-</nz-tabset>
+@if (cvs.length > 0) {
+  <nz-tabset
+    nzTabPosition="left"
+    [nzTabBarExtraContent]="extraTemplate"
+    class="h-[70vh]"
+    >
+    @for (cv of cvs; track cv) {
+      <nz-tab [nzTitle]="titleTemplate">
+        <ng-template #titleTemplate>
+          <div class="flex flex-row w-52 justify-between items-center">
+            <span>{{ cv.name }}</span>
+            <button nz-button nzType="text" (click)="deleteCv($event, cv.id)">
+              <span nz-icon nzType="delete" nzTheme="outline"></span>
+            </button>
+          </div>
+        </ng-template>
+        <div>
+          <app-update-cv-form [cv]="cv"></app-update-cv-form>
+        </div>
+      </nz-tab>
+    }
+  </nz-tabset>
+} @else {
+  <div class="flex justify-center items-center h-[70vh]">
+    <button nz-button (click)="createCv()">
+      <span nz-icon nzType="plus" nzTheme="outline"></span>
+    </button>
+  </div>
+}
 
 <ng-template #extraTemplate>
   <button nz-button (click)="createCv()">
@@ -25,10 +34,3 @@
   </button>
 </ng-template>
 
-<ng-template #noCvsTemplate>
-  <div class="flex justify-center items-center h-[70vh]">
-    <button nz-button (click)="createCv()">
-      <span nz-icon nzType="plus" nzTheme="outline"></span>
-    </button>
-  </div>
-</ng-template>

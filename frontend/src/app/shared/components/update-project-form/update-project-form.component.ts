@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { Store } from '@ngrx/store';
 import { IAppState } from '../../../store/states/app.state';
 import { ProjectDto } from '../../../dto/project.dto';
-import { CommonModule } from '@angular/common';
+
 import { TranslateModule } from '@ngx-translate/core';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzFormModule } from 'ng-zorro-antd/form';
@@ -16,7 +16,7 @@ import { ToastrService } from 'ngx-toastr';
 @Component({
     selector: 'app-update-project-form',
     standalone: true,
-    imports: [CommonModule, TranslateModule, ReactiveFormsModule, FormsModule, NzFormModule, NzInputModule, NzDatePickerModule, NzButtonModule],
+    imports: [TranslateModule, ReactiveFormsModule, FormsModule, NzFormModule, NzInputModule, NzDatePickerModule, NzButtonModule],
     templateUrl: './update-project-form.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush
 })

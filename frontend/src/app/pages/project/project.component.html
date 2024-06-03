@@ -1,7 +1,6 @@
-<ng-container *ngIf="project$ | async as project; else notFound">
+@if (project$ | async; as project) {
   <app-update-project-form [project]="project"></app-update-project-form>
-</ng-container>
-
-<ng-template #notFound>
+} @else {
   <h1>Project not found</h1>
-</ng-template>
+}
+

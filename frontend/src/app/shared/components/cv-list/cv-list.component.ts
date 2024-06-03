@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CvDto } from '../../../dto/cv.dto';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
-import { CommonModule } from '@angular/common';
+
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { UpdateCvFormComponent } from '../update-cv-form/update-cv-form.component';
@@ -13,7 +13,7 @@ import { getProjects } from '../../../store/actions/project.action';
 @Component({
     selector: 'app-cv-list',
     standalone: true,
-    imports: [CommonModule, NzTabsModule, NzButtonModule, NzIconModule, UpdateCvFormComponent],
+    imports: [NzTabsModule, NzButtonModule, NzIconModule, UpdateCvFormComponent],
     templateUrl: './cv-list.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush
 })

@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
@@ -13,9 +13,7 @@ import { EmployeeActionsEnum } from '../../../store/actions/employee.action';
 @Component({
     selector: 'app-add-employee-form',
     standalone: true,
-    imports: [CommonModule, FormsModule, ReactiveFormsModule,
-        NzFormModule, NzInputModule, NzButtonModule,
-        TranslateModule, NzModalModule],
+    imports: [FormsModule, ReactiveFormsModule, NzFormModule, NzInputModule, NzButtonModule, TranslateModule, NzModalModule],
     templateUrl: './add-employee-form.component.html'
 })
 export class AddEmployeeFormComponent implements OnInit {

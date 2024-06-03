@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '../../shared/components/header/header.component';
@@ -9,7 +9,7 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 @Component({
     selector: 'app-dashboard-layout',
     standalone: true,
-    imports: [CommonModule, RouterOutlet, NzLayoutModule, HeaderComponent, SidebarComponent, BreadcrumbsComponent],
+    imports: [RouterOutlet, NzLayoutModule, HeaderComponent, SidebarComponent, BreadcrumbsComponent],
     templateUrl: './dashboard-layout.component.html'
 })
 export class DashboardLayoutComponent {

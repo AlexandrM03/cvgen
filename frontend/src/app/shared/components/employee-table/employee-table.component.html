@@ -9,16 +9,17 @@
     </tr>
   </thead>
   <tbody>
-    <tr
-      *ngFor="let data of basicTable.data"
-      class="cursor-pointer"
-      (click)="handleClickedRow(data.id)"
-    >
-      <td>{{ data.firstName }}</td>
-      <td>{{ data.lastName }}</td>
-      <td>{{ data.email }}</td>
-      <td>{{ data.department }}</td>
-      <td>{{ data.specialization }}</td>
-    </tr>
+    @for (data of basicTable.data; track data) {
+      <tr
+        class="cursor-pointer"
+        (click)="handleClickedRow(data.id)"
+        >
+        <td>{{ data.firstName }}</td>
+        <td>{{ data.lastName }}</td>
+        <td>{{ data.email }}</td>
+        <td>{{ data.department }}</td>
+        <td>{{ data.specialization }}</td>
+      </tr>
+    }
   </tbody>
 </nz-table>

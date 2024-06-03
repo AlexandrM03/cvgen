@@ -21,6 +21,7 @@ import { en_US, provideNzI18n } from 'ng-zorro-antd/i18n';
 import { ProjectsEffects } from './store/effects/project.effect';
 import { CvsEffects } from './store/effects/cv.effect';
 import { SharedEffects } from './store/effects/shared.effect';
+import { provideClientHydration } from '@angular/platform-browser';
 
 registerLocaleData(en);
 
@@ -46,7 +47,7 @@ export const appConfig: ApplicationConfig = {
         tokenInterceptorProvider,
         provideStore(appReducers),
         provideEffects(EmployeesEffects, ProjectsEffects, CvsEffects, SharedEffects),
-        provideNzI18n(en_US)
+        provideNzI18n(en_US), provideClientHydration()
     ],
 };
 

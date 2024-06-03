@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, ValidationErrors, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
@@ -23,9 +23,7 @@ function dateRangeValidator(control: AbstractControl): ValidationErrors | null {
 @Component({
     selector: 'app-add-project-form',
     standalone: true,
-    imports: [CommonModule, FormsModule, ReactiveFormsModule,
-        NzFormModule, NzInputModule, NzButtonModule,
-        TranslateModule, NzModalModule, NzDatePickerModule],
+    imports: [FormsModule, ReactiveFormsModule, NzFormModule, NzInputModule, NzButtonModule, TranslateModule, NzModalModule, NzDatePickerModule],
     templateUrl: './add-project-form.component.html'
 })
 export class AddProjectFormComponent implements OnInit {

@@ -1,4 +1,4 @@
-<ng-container *ngIf="employee$ | async as employee; else notFound">
+@if (employee$ | async; as employee) {
   <nz-tabset>
     <nz-tab nzTitle="Info">
       <app-update-employee-form
@@ -13,8 +13,7 @@
       ></app-cv-list>
     </nz-tab>
   </nz-tabset>
-</ng-container>
-
-<ng-template #notFound>
+} @else {
   <h1>Employee not found</h1>
-</ng-template>
+}
+

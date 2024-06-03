@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router, RouterModule, RouterOutlet } from '@angular/router';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
@@ -16,7 +16,7 @@ interface Breadcrumb {
 @Component({
     selector: 'app-breadcrumbs',
     standalone: true,
-    imports: [NzBreadCrumbModule, CommonModule, RouterModule],
+    imports: [NzBreadCrumbModule, RouterModule],
     templateUrl: './breadcrumbs.component.html'
 })
 export class BreadcrumbsComponent {

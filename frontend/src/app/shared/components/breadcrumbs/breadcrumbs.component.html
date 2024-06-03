@@ -1,5 +1,7 @@
 <nz-breadcrumb class="my-4">
-  <nz-breadcrumb-item *ngFor="let breadcrumb of breadcrumbs">
-    <a [routerLink]="breadcrumb.url"> {{ breadcrumb.label }} </a>
-  </nz-breadcrumb-item>
+  @for (breadcrumb of breadcrumbs; track breadcrumb) {
+    <nz-breadcrumb-item>
+      <a [routerLink]="breadcrumb.url"> {{ breadcrumb.label }} </a>
+    </nz-breadcrumb-item>
+  }
 </nz-breadcrumb>
